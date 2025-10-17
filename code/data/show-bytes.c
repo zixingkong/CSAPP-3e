@@ -96,35 +96,36 @@ void show_twocomp() {
   /* $end show-twocomp */
 }
 
-// int main(int argc, char *argv[]) {
-//   int val = 12345;
+int main(int argc, char *argv[]) {
+  int val = 12345;
 
-//   if (argc > 1) {
-//     if (argc > 1) {
-//       val = strtol(argv[1], NULL, 0);
-//       show_bytes((byte_pointer)argv[1], strlen(argv[1]));
-//     }
-//     printf("calling test_show_bytes\n");
-//     test_show_bytes(val);
-//   } else {
-//     printf("calling show_twocomp\n");
-//     show_twocomp();
-//     printf("Calling simple_show_a\n");
-//     simple_show_a();
-//     printf("Calling simple_show_b\n");
-//     simple_show_b();
-//     printf("Calling float_eg\n");
-//     float_eg();
-//     printf("Calling string_ueg\n");
-//     string_ueg();
-//     printf("Calling string_leg\n");
-//     string_leg();
-//   }
-//   return 0;
-// }
-
-int main(){
-    const char *s = "abcdef";
-    show_bytes((byte_pointer)s, strlen(s));
-    return 0;
+  if (argc > 1) {
+    if (argc > 1) {
+      val = strtol(argv[1], NULL, 0);
+      show_bytes((byte_pointer)argv[1], strlen(argv[1]));
+    }
+    printf("calling test_show_bytes\n");
+    test_show_bytes(val);
+    test_show_bytes(-val);
+  } else {
+    printf("calling show_twocomp\n");
+    show_twocomp();
+    printf("Calling simple_show_a\n");
+    simple_show_a();
+    printf("Calling simple_show_b\n");
+    simple_show_b();
+    printf("Calling float_eg\n");
+    float_eg();
+    printf("Calling string_ueg\n");
+    string_ueg();
+    printf("Calling string_leg\n");
+    string_leg();
+  }
+  return 0;
 }
+
+// int main(){
+//     const char *s = "abcdef";
+//     show_bytes((byte_pointer)s, strlen(s));
+//     return 0;
+// }
